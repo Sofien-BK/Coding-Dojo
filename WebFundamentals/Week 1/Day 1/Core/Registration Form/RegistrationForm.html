@@ -16,7 +16,7 @@
         </div>
         <div>
             <label for="Last Name">Last Name: *</label>
-            <input type="text"placeholder="Type your Last Name">
+            <input type="text" placeholder="Type your Last Name">
         </div>
         <div>
             <label for="Email Adress">Email Adress: *</label>
@@ -31,12 +31,36 @@
             <input type="password" placeholder="Confirm your password">
         </div>
         <label for="Birthday">Birthday: *</label>
-        <input type="date"name="dob">
+        <input type="date" name="dob">
     </ul>
     <p>Gender Identity:</p>
     <div>
         <input type="radio" name="font" value="Male" id="Male">
+        <label for="Male">Male</label>
+        <input type="radio" name="font" value="Female" id="Female">
+        <label for="Female">Female</label>
+        <input type="radio" name="font" value="non-binary" id="non-binary">
+        <label for="non-binary">non-binary</label>
+        <input type="radio" name="font" value="I prefer not to answer" id="I prefer not to answer">
+        <label for="I prefer not to answer">Male</label>
     </div>
+    <p>A short description about myself:</p>
+    <div>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+    </div>
+    Favorite Language:
+    <select name="snack" id="snack">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="C#">C#</option>
+        <option value="Java">Java</option>
+    </select>
+    <div>
+        <input type="checkbox" name="accept">
+        <label for="accept">Yes, I would like to receive periodic email updates</label>
+    </div>
+    <button>Create Account</button>
+    <p>*Indicates a required field</p>
 </body>
 
 </html>
