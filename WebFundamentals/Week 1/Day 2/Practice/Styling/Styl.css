@@ -1,0 +1,22 @@
+h1{
+    font-size: 60px;
+    color: white;
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+span.blue{
+    color: aqua;
+}
+h2{
+    text-align: center;
+    color: white;
+    background-color: blueviolet;
+    font-size: 45px;
+}
+h3{
+    background-color: aquamarine;
+    color: blueviolet;
+    text-align: right;
+    font-size: 35px;
+    text-decoration: underline;
+}
