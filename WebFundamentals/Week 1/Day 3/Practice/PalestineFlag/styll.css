@@ -1,0 +1,28 @@
+.container{
+    background-color: white;
+    
+}
+.black{
+    background-color: black;
+    width: 450px;
+    height: 75px;
+}
+.white{
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    height: 75px;
+}
+.green{
+    background-color: rgb(11, 92, 3);
+    width: 450px;
+    height: 75px;
+}
+.triangle-right{
+    width: 0;
+    height: 0;
+    border-top: 114px solid transparent;
+    border-left: 150px solid #f51010;
+    border-bottom: 114px solid transparent;
+    position: absolute;
+    top: 6px;
+}
