@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
 .blue{
     background-color: rgb(243, 235, 235);
     color: #36e1e4;
@@ -6,7 +11,8 @@
     border-radius: 15px;
     border-color: #34d7da;
     font-size: large;
-    font-weight: bold;    
+    font-weight: bold; 
+    border-style: double;   
 }
 .Plus{
     color: white;
@@ -15,5 +21,5 @@
     width: 50px;
     height: 50px;
     font-size: 40px;
-    border-color: aqua;
+    border-color: aqua;border-style: dotted;
 }
