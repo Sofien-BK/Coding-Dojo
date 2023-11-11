@@ -1,0 +1,130 @@
+* {
+    margin: 0px auto;
+    font-family: sans-serif;
+    /* outline: 2px solid grey; */
+}
+
+.container {
+    margin: 0px 200px;
+    padding: 0px 0px;
+}
+
+.topNav {
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.topNav input {
+    width: 350px;
+    height: 20px;
+    border: 2px solid black;
+}
+
+.blue {
+    background-color: rgb(43, 120, 228);
+    color: white;
+    width: 55px;
+    height: 30px;
+    box-shadow: 5px 5px 0px 2px #000000;
+    margin-right: 35px;
+}
+
+.topNav h1 {
+    margin-left: 35px;
+}
+
+/* main-content : */
+.left-s-t,
+.left-s-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 600px;
+    margin-left: 0px;
+}
+
+.left-s {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 25px;
+    flex: 2;
+}
+
+.left-s-t-l,
+.left-s-b-l {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-s-t,
+.left-s-b {
+    border: 2px solid black;
+}
+
+.main-box p {
+    font-weight: bold;
+}
+
+.main-box span {
+    color: rgb(69, 124, 173);
+    text-decoration: underline;
+}
+
+.Yellow {
+    background-color: rgb(255, 217, 102);
+    color: black;
+    width: 70px;
+    height: 30px;
+    box-shadow: 5px 5px 0px 0px #000000;
+    margin-right: 35px;
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+.main-box {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.right-s {
+    flex: 1;
+    border: 2px solid black;
+    height: 150px;
+    margin-top: 25px;   
+}
+
+.right-s-t {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.green {
+    background-color: rgb(147, 196, 125);
+    color: black;
+    height: 35px;
+    width: 280px;
+    box-shadow: 5px 5px 0px 0px #000000;
+    font-weight: bold;
+}
+
+.right-s h3 {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#black{
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
