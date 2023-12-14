@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<h1>Welcome {{loggedin_user.first_name}}</h1>
+        <table>
+            <thead>
+                <th>
+                    <tr>Name</tr>
+                    <tr>Type</tr>
+                    <tr>Power</tr>
+                    <tr>HP</tr>
+                    <tr>Action</tr>
+                </th>
+            </thead>
+            <tbody>
+                <td>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr><a href="#">Edit</a> | <a href="#">Show</a> | <a href="#">Delete</a></tr>
+                </td>
+            </tbody>
+        </table>
+        
+		<a href="/logout">LOGOUT</a>
+	</body>
+</html>

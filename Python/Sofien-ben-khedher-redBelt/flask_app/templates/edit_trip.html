@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New recipes</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nice-font {
+            font-family:sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <div class="row align-items-center mb-4 shadow-sm rounded p-3 bg-light">
+        <div class="d-flex justify-content-evenly align-items-center">
+            <h1 class="mb-0">Hello <strong><span class="text-primary">{{loggedin_user.first_name}}</span></strong> ! Let's Edit Your Trip!</h1>
+            <div class="col-auto">
+                <a href="/logout" class="btn btn-danger rounded-pill shadow">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                {% with messages = get_flashed_messages(category_filter=["cre"])
+                                        %}     <!-- declare a variable called messages -->
+                                            {% if messages
+                                        %}                            <!-- check if there are any messages -->
+                                            {% for message in messages %}            <!-- loop through the messages -->
+                                            
+                                        <p style="color: red">{{message}}</p>
+                                                           <!-- display each message in a paragraph tag -->
+                                                {% endfor %} {% endif %} {% endwith %}
+                <form action="/edit/{{tripId}}" method="post">
+                    <div class="form-group">
+                        <label for="description">Destination</label>
+                        <textarea class="form-control" name="destination" rows="3"
+                            placeholder="Enter description">{{trip_des}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Start Date</label>
+                        <input type="date" class="form-control" name="start_date" value="{{trip_st}}" >
+                    </div>
+                    <div class="form-group">
+                        <label for="date">End Date</label>
+                        <input type="date" class="form-control" name="end_date" value="{{trip_ed}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Plan</label>
+                        <textarea class="form-control" name="plan" rows="3"
+                            placeholder="Enter Your Plan">{{trip_pl}}</textarea>
+                    </div>
+            </div>
+            <button type="submit" class="btn btn-primary rounded-pill shadow">Submit</button>
+            </form>
+            <br>
+            <a href="/dashboard" class="btn btn-danger rounded-pill shadow">Cancel</a>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

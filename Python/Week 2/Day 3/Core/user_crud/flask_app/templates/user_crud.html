@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add User</title>
+  <style>
+    body {
+      font-family: 'YourUniqueFont', sans-serif; /* Replace 'YourUniqueFont' with your chosen font */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .header {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 300px;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    button:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px #007bff;
+      background-color: #007bff;
+    }
+    #bt{
+        background-color: #3f98f7;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Add User</h1>
+    {% with messages = get_flashed_messages(category_filter=["reg"])
+                                        %}     <!-- declare a variable called messages -->
+                                            {% if messages
+                                        %}                            <!-- check if there are any messages -->
+                                            {% for message in messages %}            <!-- loop through the messages -->
+                                            
+                                        <p style="color: red">{{message}}</p>
+                                                           <!-- display each message in a paragraph tag -->
+                                                {% endfor %} {% endif %} {% endwith %}
+    <form action="/users/register" method="post" >
+      <div>
+        <input type="text" name="first_name" placeholder="First Name">
+      </div>
+      <div>
+        <input type="text" name="last_name" placeholder="Last Name">
+      </div>
+      <div>
+        <input type="email" name="email" placeholder="Email">
+      </div>
+      <div>
+        <button id="bt" type="submit">Add User</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

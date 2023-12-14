@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'YourUniqueFont', sans-serif;
+            /* Replace 'YourUniqueFont' with your chosen font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        table {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #007bff;
+            background-color: #007bff;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Here are our users</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Created at</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for one_user in all_them %}
+                <tr>
+                    {% for i in range(4) %}
+                    <td class="fw-bold">{{ one_user[i] }}</td>
+                    {% endfor %}
+                    {% if session.user_id == one_user[5] %}
+                    <td class="d-flex justify-content-evenly align-items-center">
+                        <a class="btn btn-success" href="/user/show/{{one_user[5]}}">Show</a>
+                        <a class="btn btn-warning" href="/user/edit/{{one_user[5]}}">Edit</a>
+                        <a class="btn btn-danger" href="/user/edit/{{one_user[5]}}">Delete</a>
+                    </td>
+                    {% else %}
+                    <td class="d-flex justify-content-evenly align-items-center"><a
+                            class="btn btn-success" href="/one_user/{{one_user[3]}}">Show</a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button>Add User</button>
+    </div>
+</body>
+
+</html>
